@@ -1,10 +1,20 @@
+import fetchData from "./api.js";
+
+let cars; // Declare cars globally
+let vehicleData
+(async () => {
+    cars = await fetchData(); // Assign fetched data to the global variable
+    console.log(cars);
+
+    // You can now safely use `cars` here or in other parts of the code
+
 // Vehicle and Tourist Sites Data Management
-const vehicleData = {
+vehicleData = {
     vehicles: [
         {
             id: 1,
-            name: "Toyota Prado",
-            type: "SUV",
+            name: cars.trims[0].name,
+            type: cars.trims[0].make_model.name,
             seats: 5,
             pricePerDay: 100,
             availability: true,
@@ -12,8 +22,8 @@ const vehicleData = {
         },
         {
             id: 2,
-            name: "Land Rover Discovery",
-            type: "SUV",
+            name: cars.trims[1].name,
+            type: cars.trims[1].make_model.name,
             seats: 7,
             pricePerDay: 150,
             availability: true,
@@ -21,8 +31,8 @@ const vehicleData = {
         },
         {
             id: 3,
-            name: "Toyota Camry",
-            type: "Sedan",
+            name: cars.trims[2].name,
+            type: cars.trims[2].make_model.name,
             seats: 4,
             pricePerDay: 80,
             availability: true,
@@ -42,6 +52,9 @@ const vehicleData = {
         ]
     }
 };
+
+})();
+
 
 // Utility Functions
 const utils = {
