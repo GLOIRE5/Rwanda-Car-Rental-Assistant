@@ -65,6 +65,7 @@ Pricing Plans: Subscription Options
 - Integrate real-time vehicle availability
 - Add more comprehensive search filters
 - Implement backend booking system
+
 ##Credits
 APIs and Services
 Have I Been Pwned (HIBP) API: Special thanks to Troy Hunt and the team behind Have I Been Pwned for providing the API that allows us to check if passwords have been compromised. Their service has been instrumental in enhancing the security of this application.
